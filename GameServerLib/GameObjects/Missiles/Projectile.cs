@@ -12,6 +12,7 @@ using LeagueSandbox.GameServer.GameObjects.Spells;
 
 namespace LeagueSandbox.GameServer.GameObjects.Missiles
 {
+    //抛射体; （炮弹、子弹等） 射弹，（火箭等）自动推进的武器;
     public class Projectile : ObjMissile, IProjectile
     {
         public List<GameObject> ObjectsHit { get; private set; }

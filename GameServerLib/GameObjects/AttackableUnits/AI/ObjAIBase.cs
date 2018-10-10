@@ -99,6 +99,14 @@ namespace LeagueSandbox.GameServer.GameObjects.AttackableUnits.AI
             Buffs = new Dictionary<string, Buff>();
         }
 
+        /// <summary>
+        /// ((ObjAiBase) target).AddBuffGameScript("LuluR", "LuluR", spell, 7.0f);
+        /// </summary>
+        /// <param name="buffNamespace"></param>
+        /// <param name="buffClass"></param>
+        /// <param name="ownerSpell"></param>
+        /// <param name="removeAfter"></param>
+        /// <param name="isUnique"></param>
         public void AddBuffGameScript(string buffNamespace, string buffClass, ISpell ownerSpell, float removeAfter = -1f, bool isUnique = false)
         {
             if (isUnique)
@@ -547,6 +555,10 @@ namespace LeagueSandbox.GameServer.GameObjects.AttackableUnits.AI
             UpdateAutoAttackTarget(diff);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="killer"></param>
         public override void Die(IAttackableUnit killer)
         {
             var onDie = _scriptEngine.GetStaticMethod<Action<AttackableUnit, IAttackableUnit>>(Model, "Passive", "OnDie");

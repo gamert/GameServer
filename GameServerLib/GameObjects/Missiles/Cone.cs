@@ -11,6 +11,7 @@ using LeagueSandbox.GameServer.GameObjects.Spells;
 
 namespace LeagueSandbox.GameServer.GameObjects.Missiles
 {
+    //圆锥体; 球果; 圆锥形东西;
     internal class Cone : Projectile
     {
         private bool _affectAsCastIsOver;

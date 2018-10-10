@@ -107,6 +107,10 @@ namespace LeagueSandbox.GameServer.GameObjects.AttackableUnits.AI
             Replication.Update();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="killer"></param>
         public override void Die(IAttackableUnit killer)
         {
             foreach (var player in _game.ObjectManager.GetAllChampionsFromTeam(killer.Team))

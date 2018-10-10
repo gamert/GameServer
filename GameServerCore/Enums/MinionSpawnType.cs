@@ -1,5 +1,6 @@
 ﻿namespace GameServerCore.Enums
 {
+    //奴才
     public enum MinionSpawnType : byte
     {
         MINION_TYPE_MELEE = 0x00,

@@ -91,6 +91,10 @@ namespace LeagueSandbox.GameServer.GameObjects.AttackableUnits
             return Stats.MoveSpeed.Total;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="killer"></param>
         public virtual void Die(IAttackableUnit killer)
         {
             SetToRemove();
@@ -125,6 +129,14 @@ namespace LeagueSandbox.GameServer.GameObjects.AttackableUnits
             return false; //return DistressCause;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="attacker"></param>
+        /// <param name="damage"></param>
+        /// <param name="type"></param>
+        /// <param name="source"></param>
+        /// <param name="damageText"></param>
         public virtual void TakeDamage(IAttackableUnit attacker, float damage, DamageType type, DamageSource source,
             DamageText damageText)
         {
@@ -193,6 +205,14 @@ namespace LeagueSandbox.GameServer.GameObjects.AttackableUnits
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="attacker"></param>
+        /// <param name="damage"></param>
+        /// <param name="type"></param>
+        /// <param name="source"></param>
+        /// <param name="isCrit"></param>
         public virtual void TakeDamage(IAttackableUnit attacker, float damage, DamageType type, DamageSource source, bool isCrit)
         {
             var text = DamageText.DAMAGE_TEXT_NORMAL;

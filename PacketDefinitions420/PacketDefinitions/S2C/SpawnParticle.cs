@@ -7,6 +7,7 @@ namespace PacketDefinitions420.PacketDefinitions.S2C
 {
     public class SpawnParticle : BasePacket
     {
+        //
         public SpawnParticle(INavGrid navGrid, IParticle particle)
             : base(PacketCmd.PKT_S2C_SPAWN_PARTICLE, particle.Owner.NetId)
         {

@@ -136,6 +136,15 @@ namespace LeagueSandbox.GameServer.API
             return p;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="champion"></param>
+        /// <param name="particle"></param>
+        /// <param name="target"></param>
+        /// <param name="size"></param>
+        /// <param name="bone"></param>
+        /// <returns></returns>
         public static Particle AddParticleTarget(IChampion champion, string particle, ITarget target, float size = 1.0f, string bone = "")
         {
             var p = new Particle(_game, champion, target, particle, size, bone);

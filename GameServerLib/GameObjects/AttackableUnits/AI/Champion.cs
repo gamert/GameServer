@@ -544,6 +544,12 @@ namespace LeagueSandbox.GameServer.GameObjects.AttackableUnits.AI
             Skin = skinNo;
         }
 
+        /// <summary>
+        /// 不需要通知？
+        /// </summary>
+        /// <param name="name"></param>
+        /// <param name="slot"></param>
+        /// <param name="enabled"></param>
         public void SetSpell(string name, byte slot, bool enabled)
         {
             Spells[slot] = new Spell(_game, this, name, (byte)slot);

@@ -4,6 +4,7 @@ using LeagueSandbox.GameServer.GameObjects.AttackableUnits;
 
 namespace LeagueSandbox.GameServer.GameObjects.Stats
 {
+    //复制，折叠; 回答; 反响; [植] 反叠;
     public abstract class Replication : IReplication
     {
         public class Replicate : IReplicate
