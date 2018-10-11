@@ -3,6 +3,10 @@ using GameServerCore.Enums;
 
 namespace LeagueSandbox.GameServer.GameObjects.AttackableUnits.Buildings.AnimatedBuildings
 {
+    /*
+     * The Nexus is the primary objective for each map. 
+     * In order to win a match, a team has to destroy the opposing team's Nexus.
+     */
     public class Nexus : ObjAnimatedBuilding, INexus
     {
         public Nexus(

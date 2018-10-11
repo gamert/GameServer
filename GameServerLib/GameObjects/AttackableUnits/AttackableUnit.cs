@@ -36,6 +36,7 @@ namespace LeagueSandbox.GameServer.GameObjects.AttackableUnits
         public InventoryManager Inventory { get; protected set; }
         public int KillDeathCounter { get; protected set; }
         public int MinionCounter { get; protected set; }
+        //复制品？
         public Replication Replication { get; protected set; }
 
         IReplication IAttackableUnit.Replication => Replication;

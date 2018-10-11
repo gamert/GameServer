@@ -7,6 +7,20 @@ using LeagueSandbox.GameServer.Items;
 
 namespace LeagueSandbox.GameServer.GameObjects.AttackableUnits.AI
 {
+    /*
+     *A turret, also called a tower, is a heavy fortification that blocks the enemy's minion waves and champions' path to the nexus. 
+     * Turrets are one of the core components of LeagueSandbox. 
+     * They deal damage to enemies and provide vision and general control of the battlefield to their team. 
+     * Champions must destroy enemy turrets to push their assault into the enemies' territory. 
+     * Turrets deal heavy damage to enemy units, but they only target one unit at a time. 
+     * Turrets visually fall apart as they take damage.
+        There are 11 turrets per team on Summoner's Rift, 7 on Twisted Treeline, and 4 on Howling Abyss.
+
+        Nexus towers: Located in front of the nexus, there are two of them.
+        Inhibitor towers: Located in front of each inhibitor, guarding the entrances to the base.
+        Inner towers: Located in front of the inhibitor towers.
+        Outer towers: Located in front of the inner towers.
+    */
     public class BaseTurret : ObjAiBase, IBaseTurret
     {
         public string Name { get; private set; }

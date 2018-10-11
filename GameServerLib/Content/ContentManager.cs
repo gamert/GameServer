@@ -8,6 +8,7 @@ using Newtonsoft.Json.Linq;
 
 namespace LeagueSandbox.GameServer.Content
 {
+    //Config Manager
     public class ContentManager
     {
         private readonly ILog _logger;

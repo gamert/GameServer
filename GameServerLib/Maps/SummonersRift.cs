@@ -11,8 +11,10 @@ using LeagueSandbox.GameServer.Scripting.CSharp;
 
 namespace LeagueSandbox.GameServer.Maps
 {
+    //召唤师峡谷
     internal class SummonersRift : IMapGameScript
     {
+        //蓝上路点
         private static readonly List<Vector2> BlueTopWaypoints = new List<Vector2>
         {
             new Vector2(917.0f, 1725.0f),
@@ -84,6 +86,7 @@ namespace LeagueSandbox.GameServer.Maps
             new Vector2(1418.0f, 1686.0f)
         };
 
+        //
         private static readonly List<MinionSpawnType> RegularMinionWave = new List<MinionSpawnType>
         {
             MinionSpawnType.MINION_TYPE_MELEE,

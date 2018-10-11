@@ -14,6 +14,10 @@ using LeagueSandbox.GameServer.Items;
 
 namespace LeagueSandbox.GameServer.GameObjects.AttackableUnits.AI
 {
+    /*
+     * Champions are the player-controlled character in LeagueSandbox. 
+     * Each champion possesses unique abilities and attributes.
+     */
     public class Champion : ObjAiBase, IChampion
     {
         public Shop Shop { get; protected set; }

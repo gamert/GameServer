@@ -7,6 +7,12 @@ using LeagueSandbox.GameServer.GameObjects.Stats;
 
 namespace LeagueSandbox.GameServer.GameObjects.AttackableUnits.AI
 {
+    /*
+     * Minions are units aligned with one of the teams. 
+     * They spawn periodically from their nexus and advance along a lane towards the enemy nexus. 
+     * They attack automatically any enemy unit or structure they find in their way. 
+     * They are controlled by artificial intelligence, and only use basic attacks.
+     */
     public class Minion : ObjAiBase, IMinion
     {
         /// <summary>
@@ -167,7 +173,7 @@ namespace LeagueSandbox.GameServer.GameObjects.AttackableUnits.AI
                     {
                         SetWaypoints(path);
                     }*/
-                }
+}
             }
         }
 

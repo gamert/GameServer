@@ -11,6 +11,7 @@ using LeagueSandbox.GameServer.Packets;
 
 namespace LeagueSandbox.GameServer.GameObjects
 {
+    //所有场景实体的Entity:
     public class GameObject : Target, IGameObject
     {
         public uint NetId { get; private set; }

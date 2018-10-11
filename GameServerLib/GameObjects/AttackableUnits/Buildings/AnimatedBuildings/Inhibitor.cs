@@ -6,6 +6,7 @@ using LeagueSandbox.GameServer.GameObjects.AttackableUnits.AI;
 
 namespace LeagueSandbox.GameServer.GameObjects.AttackableUnits.Buildings.AnimatedBuildings
 {
+    //水晶
     public class Inhibitor : ObjAnimatedBuilding, IInhibitor
     {
         private Timer _respawnTimer;

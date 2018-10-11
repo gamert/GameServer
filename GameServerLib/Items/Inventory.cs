@@ -3,6 +3,7 @@ using System.Linq;
 
 namespace LeagueSandbox.GameServer.Items
 {
+    //库存(商店?)
     public class Inventory
     {
         private const byte TRINKET_SLOT = 6;

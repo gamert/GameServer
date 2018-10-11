@@ -4,6 +4,7 @@ using LeagueSandbox.GameServer.GameObjects.Other;
 
 namespace LeagueSandbox.GameServer.GameObjects
 {
+    //服务器管理粒子生命期:
     public class Particle : GameObject, IParticle
     {
         public IChampion Owner { get; private set; }

@@ -2,6 +2,7 @@
 
 namespace LeagueSandbox.GameServer.GameObjects.Stats
 {
+    //属性复制品？
     public class ReplicationHero : Replication
     {
         public ReplicationHero(Champion owner) : base(owner)

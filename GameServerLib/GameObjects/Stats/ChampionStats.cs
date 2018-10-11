@@ -4,6 +4,7 @@ using GameServerCore.Domain.GameObjects;
 
 namespace LeagueSandbox.GameServer.GameObjects.Stats
 {
+    // KDA?
     // deviates from the style guide
     // see discussion here:https://github.com/LeagueSandbox/GameServer/pull/583
     [StructLayout(LayoutKind.Explicit)]

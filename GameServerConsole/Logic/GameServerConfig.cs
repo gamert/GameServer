@@ -5,7 +5,7 @@ namespace LeagueSandbox.GameServerConsole.Logic
 {
     public class GameServerConfig
     {
-        public string ClientLocation { get; private set; } = "C:\\LeagueSandbox\\League_Sandbox_Client";
+        public string ClientLocation { get; private set; } = "G:\\GitHub\\LeagueSandbox\\League_Sandbox_Client";
         public bool AutoStartClient { get; private set; } = true;
 
         private GameServerConfig()

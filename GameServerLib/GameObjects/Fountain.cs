@@ -3,6 +3,7 @@ using GameServerCore.Enums;
 
 namespace LeagueSandbox.GameServer.GameObjects
 {
+    //泉(+HP +MP)
     public class Fountain
     {
         private const float PERCENT_MAX_HEALTH_HEAL = 0.15f;

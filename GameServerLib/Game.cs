@@ -248,6 +248,8 @@ namespace LeagueSandbox.GameServer
             }
             return dict;
         }
+
+        //使用匿名获取基类...
         private static List<T> GetInstances<T>(IGame g)
         {
             return (Assembly.GetCallingAssembly()
