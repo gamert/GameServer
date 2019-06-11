@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Numerics;
+using GameServerCore.Domain;
 using LeagueSandbox.GameServer.Content;
 using Newtonsoft.Json.Linq;
 
@@ -21,6 +22,7 @@ namespace LeagueSandbox.GameServer
         public bool ChatCheatsEnabled { get; private set; }
         public bool MinionSpawnsEnabled { get; private set; }
         public string ContentPath { get; private set; }
+        public bool IsDamageTextGlobal { get; private set; }
 
         private Config()
         {
@@ -68,6 +70,9 @@ namespace LeagueSandbox.GameServer
 
             // Read where the content is
             ContentPath = (string)gameInfo.SelectToken("CONTENT_PATH");
+
+            // Read global damage text setting
+            IsDamageTextGlobal = (bool)gameInfo.SelectToken("IS_DAMAGE_TEXT_GLOBAL");
 
             // Load items
             game.ItemManager.AddItems(ItemContentCollection.LoadItemsFrom(
@@ -157,10 +162,9 @@ namespace LeagueSandbox.GameServer
         public string Summoner2 => (string)_playerData.SelectToken("summoner2");
         public short Ribbon => (short)_playerData.SelectToken("ribbon");
         public int Icon => (int)_playerData.SelectToken("icon");
-        public RuneCollection Runes => _runeList;
+        public IRuneCollection Runes { get; }
 
         private JToken _playerData;
-        private RuneCollection _runeList;
 
         public PlayerConfig(JToken playerData)
         {
@@ -168,11 +172,11 @@ namespace LeagueSandbox.GameServer
             try
             {
                 var runes = _playerData.SelectToken("runes");
-                _runeList = new RuneCollection();
+                Runes = new RuneCollection();
 
                 foreach (JProperty runeCategory in runes)
                 {
-                    _runeList.Add(Convert.ToInt32(runeCategory.Name), Convert.ToInt32(runeCategory.Value));
+                    Runes.Add(Convert.ToInt32(runeCategory.Name), Convert.ToInt32(runeCategory.Value));
                 }
             }
             catch (Exception)
